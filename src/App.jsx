@@ -86,26 +86,42 @@ export default function PremiumWedding() {
       )}
 
       {/* HERO PARALLAX */}
-      <section
-        className="h-screen bg-fixed bg-center bg-cover flex items-center justify-center text-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1519741497674-611481863552')",
-        }}
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
-        >
-          <h1 className="text-7xl md:text-9xl font-serif">Alin & Aldi</h1>
-          <p className="mt-6 tracking-widest">20 DECEMBER 2026</p>
-        </motion.div>
-      </section>
+      <section className="h-screen relative flex items-center justify-center text-center text-white">
+
+  {/* Background */}
+  <div className="absolute inset-0 bg-linear-to-b from-black/80 to-black">
+    <img 
+      src="https://images.unsplash.com/photo-1519741497674-611481863552"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-black/60" />
+  </div>
+
+  {/* Content */}
+  <motion.div
+    initial={{ opacity: 0, y: 80 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1.5 }}
+    className="relative z-10"
+  >
+    <p className="tracking-[0.5em] text-sm mb-4">
+      THE WEDDING OF
+    </p>
+
+    <h1 className="text-6xl md:text-8xl font-serif">
+      Alin & Aldi
+    </h1>
+
+    <p className="mt-6 tracking-widest">
+      20 DECEMBER 2026
+    </p>
+  </motion.div>
+
+</section>
 
       {/* STORY SECTION */}
       <section className="py-32 text-center max-w-3xl mx-auto">
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" className="absolute inset-0 bg-linear-to-b from-black/80 to-black">
           <h2 className="text-5xl font-serif mb-6">Our Story</h2>
           <p className="text-gray-300 leading-relaxed">
             Sebuah perjalanan yang dimulai dari pertemuan sederhana, hingga akhirnya
@@ -137,7 +153,7 @@ export default function PremiumWedding() {
           {[1,2,3,4,5,6].map((i) => (
             <motion.img
               key={i}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.07 }}
               data-aos="zoom-in"
               src={`https://picsum.photos/500/600?random=${i}`}
               className="rounded-2xl shadow-2xl"
@@ -179,7 +195,7 @@ export default function PremiumWedding() {
       </section>
 
       {/* FOOTER */}
-      <footer className="py-20 text-center bg-white text-black">
+      <footer className="py-32 text-center bg-white text-black">
         <h3 className="text-3xl font-serif">Thank You</h3>
         <p className="mt-4">Alin & Aldi</p>
       </footer>
