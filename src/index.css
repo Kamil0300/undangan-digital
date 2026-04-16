@@ -1,0 +1,139 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+/* =========================
+   GLOBAL STYLE
+========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* =========================
+   TYPOGRAPHY PREMIUM
+========================= */
+h1, h2, h3 {
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+/* =========================
+   SCROLLBAR CUSTOM
+========================= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* =========================
+   ANIMATION GLOBAL
+========================= */
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.zoom-in {
+  animation: zoomIn 1.2s ease;
+}
+
+.slide-up {
+  animation: slideUp 1.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   IMAGE STYLE
+========================= */
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================
+   BUTTON PREMIUM
+========================= */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   GLASS EFFECT (OPTIONAL)
+========================= */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+
+/* =========================
+   SHADOW PREMIUM
+========================= */
+.shadow-soft {
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1);
+}
